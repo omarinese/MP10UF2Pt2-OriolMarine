@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <template id="custom_report_saleorder" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div[@class='page']" position="inside">
+
+                <div class="custom-info">
+                    
+                    <div t-if="doc.customer_email" class="info-item">
+                        <strong>Correu electronic:</strong>
+                        <span t-field="doc.customer_email"/>
+                    </div>
+                    
+                    <div t-if="doc.total_product_count" class="info-item">
+                        <strong>Quantitat de productes:</strong>
+                        <span t-field="doc.total_product_count"/>
+                    </div>
+
+                    
+                </div>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>
